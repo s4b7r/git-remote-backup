@@ -17,6 +17,7 @@ This is a controller and target for remote Git backups. It does a `remote update
 7.  Create `ftp.secret` from `ftp.secret.sample`
 8.  Fill all necessary variables in the script files.
     - **I am sorry, this must be made easier in the future.**
+    - Caution: some places still name it FTP but actually SFTP is used now.
 9.  Add `git-backup_do_*.sh` scripts to crontab: use `crontab -e` or put into `/etc/crontab`, e.g.:
     -  `0  19 *   * *   <SCRIPT PATH>/git-backup_do_daily.sh`
     -  `45 12 1-7 * *   [ $(date +\%u) -eq 5 ] && <SCRIPT PATH>/git-backup_do_monthly.sh` (Does it on the first Friday in every month on my system. Please check for yours.)
